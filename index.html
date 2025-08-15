@@ -1,493 +1,698 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/lp_logo_bgrm.png" type="">
-
-  <title> LakhRupay </title>
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-
-  <script 
-  type="text/javascript"
-  src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
-  id="aisensy-wa-widget"
-  widget-id="h9IGMG">
-</script>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadVault - Premium Lead Data Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+        .hover-gold:hover { background-color: #B8860B; }
+        .text-black { color: #1a1a1a; }
+        .bg-white { background-color: #ffffff; }
+        .bg-off-white { background-color: #fafafa; }
+        .transition-all { transition: all 0.3s ease; }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            color: #1a1a1a;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        .best-value {
+            border: 2px solid #D4AF37;
+            position: relative;
+            transform: scale(1.05);
+        }
+        .best-value::before {
+            content: "BEST VALUE";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D4AF37;
+            color: #1a1a1a;
+            padding: 4px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: #1a1a1a;
+            font-size: 24px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            border-left: 2px solid #D4AF37;
+            margin-bottom: 32px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: #D4AF37;
+            border-radius: 50%;
+        }
+        .form-input:focus {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+<body class="bg-white text-black">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-black">
+                        <i class="fas fa-database gold mr-2"></i>LeadVault
+                    </h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="nav-link px-3 py-2 text-black hover:gold font-medium" data-page="home">Home</a>
+                        <a href="#" class="nav-link px-3 py-2 text-black hover:gold font-medium" data-page="about">About</a>
+                        <a href="#" class="nav-link px-3 py-2 text-black hover:gold font-medium" data-page="services">Services</a>
+                        <a href="#" class="nav-link px-3 py-2 text-black hover:gold font-medium" data-page="pricing">Pricing</a>
+                        <a href="#" class="nav-link px-3 py-2 text-black hover:gold font-medium" data-page="contact">Contact</a>
+                    </div>
+                </div>
 
-<body>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-btn text-black focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <div class="bg_img_box">
-        <img src="images/hero-bg.png" alt="">
-      </div>
-    </div>
-
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              LakhRupay
-            </span>
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about_section"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#service_section">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact_section">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://forms.gle/BiQdShQcD62QiTdG8">Apply Now</a>
-              </li>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu fixed inset-0 bg-white z-50 md:hidden">
+            <div class="flex justify-end p-4">
+                <button type="button" class="mobile-menu-close text-black">
+                    <i class="fas fa-times text-2xl"></i>
                 </button>
-              </form>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6 ">
-                  <div class="detail-box">
-                    <h1>
-                      Business Loan <br>
-                      25 Lakh Rupay
-                    </h1>
-                    <p>
-                      Empowering MSMEs with Unsecured Business Loans of up to ₹25 Lakhs**.
-                      Streamlined Process: Minimal Documentation, Competitive Interest Rates, Quick Disbursals, and Simple One-Click Application.
-                    </p>
-                    <div class="btn-box">
-                      <a href="https://forms.gle/BiQdShQcD62QiTdG8" class="btn1">
-                        Apply Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6 ">
-                  <div class="detail-box">
-                    <h1>
-                      Personal Loan <br>
-                      15 Lakh Rupay
-                    </h1>
-                    <p>
-                      Meet your personal needs with our hassle-free Personal Loans.
-                      Get up to ₹15 Lakhs collateral-free with flexible repayments, no hidden charges, and zero processing fees.
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Apply Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
-                  </div>
-                </div>
-              </div>
+            <div class="px-4 py-2 space-y-4">
+                <a href="#" class="nav-link block py-2 text-lg font-medium" data-page="home">Home</a>
+                <a href="#" class="nav-link block py-2 text-lg font-medium" data-page="about">About</a>
+                <a href="#" class="nav-link block py-2 text-lg font-medium" data-page="services">Services</a>
+                <a href="#" class="nav-link block py-2 text-lg font-medium" data-page="pricing">Pricing</a>
+                <a href="#" class="nav-link block py-2 text-lg font-medium" data-page="contact">Contact</a>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6 ">
-                  <div class="detail-box">
-                    <h1>
-                      MSME Loan <br>
-                      10 Lakh Rupay
-                    </h1>
-                    <p>
-                      Boost your business with our MSME loans!
-                      Enjoy the lowest interest rates, hassle-free processing, and an EMI waiver of up to 6 months.
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Apply Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
-        </ol>
-      </div>
+    </nav>
 
-    </section>
-    <!-- end slider section -->
-  </div>
-
-
-  <!-- service section -->
-
-  <section class="service_section layout_padding" id="service_section">
-    <div class="service_container">
-      <div class="container ">
-        <div class="heading_container heading_center">
-          <h2>
-            Our <span>Services</span>
-          </h2>
-          <p>
-            We provide complete solution for MSMEs in India. Present in 28+ cities and partnered with 45+ Banks and NBFCs in India,
-            we are growing rapidly.
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/BL_img.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Business Loan
-                </h5>
-                <p>
-                  In partnership with 45+ NBFCs and banks, we carefully evaluate your needs to curate the best loan offers tailored just for you.
+    <!-- Home Page -->
+    <div class="page active" id="home">
+        <!-- Hero Section -->
+        <section class="bg-off-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-black mb-6">
+                    Premium Lead Data for <span class="gold">Growing Businesses</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Access verified, high-quality leads across India. From startups to enterprises, we deliver the data that drives your sales and marketing success.
                 </p>
-              </div>
+                <button class="cta-button px-8 py-4 rounded-full text-lg font-semibold" onclick="showPage('pricing')">
+                    Explore Data Now
+                </button>
             </div>
-          </div>
-          <div class="col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/Loan cap.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  MSME Loan
-                </h5>
-                <p>
-                  Get guaranteed MSME loan approvals with expert guidance. Unlock Mudra and MSME schemes to grow your business!
-                </p>
-              </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-black mb-4">Our Core Services</h2>
+                    <p class="text-gray-600">Comprehensive lead solutions tailored for your business needs</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Lead Data</h3>
+                        <p class="text-gray-600 text-sm">Verified contact information across industries</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">All India Data</h3>
+                        <p class="text-gray-600 text-sm">Comprehensive nationwide coverage</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Email Leads</h3>
+                        <p class="text-gray-600 text-sm">Targeted email marketing lists</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Trade Show Contacts</h3>
+                        <p class="text-gray-600 text-sm">High-value event attendees and exhibitors</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/PL_img.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Personal Loan
-                </h5>
-                <p>
-                  Planning a side hustle or personal project? We've got you covered with our hassle-free personal loans!
-                </p>
-              </div>
+        </section>
+
+        <!-- Pricing Highlight -->
+        <section class="bg-off-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-black mb-4">Competitive Pricing</h2>
+                <p class="text-gray-600 mb-8">Transparent pricing with no hidden costs</p>
+                <button class="cta-button px-8 py-4 rounded-full font-semibold" onclick="showPage('pricing')">
+                    View Pricing
+                </button>
             </div>
-          </div>
-        </div>
-        <div class="btn-box">
-            <a href="https://wa.me/919075043353?text=Hi%20LakhRupay%20">
-              Get in Touch!
-            </a>
-        </div>
-      </div>
+        </section>
     </div>
-  </section>
 
-  <!-- end service section -->
+    <!-- About Page -->
+    <div class="page" id="about">
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-black mb-4">About LeadVault</h1>
+                    <p class="text-xl text-gray-600">Your trusted partner in lead generation and data solutions</p>
+                </div>
 
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h2 class="text-3xl font-bold text-black mb-4">Our Mission</h2>
+                        <p class="text-gray-600 mb-4">
+                            We empower businesses with accurate, verified lead data that drives measurable growth. Our commitment to quality and customer success sets us apart in the industry.
+                        </p>
+                        <div class="grid grid-cols-2 gap-8 mt-8">
+                            <div>
+                                <h3 class="text-3xl font-bold gold">5+</h3>
+                                <p class="text-gray-600">Years in Business</p>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold gold">1000+</h3>
+                                <p class="text-gray-600">Clients Served</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&crop=faces" alt="Team" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
 
-  <!-- about section -->
-
-  <section class="about_section layout_padding" id = "about_section">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          About <span>Us</span>
-        </h2>
-        <p>
-          Lakh Rupay is here to support you every step of the way. Together, let's turn dreams into reality!
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              Fund Your Dreams
-            </h3>
-            <p>
-              At Lakh Rupay, we are committed to empowering individuals and businesses by providing seamless financial solutions tailored to their unique needs. With a vision to make financing accessible and hassle-free, we specialize in offering unsecured business and personal loans with competitive interest rates, minimal documentation, and quick disbursals.
-            </p>
-            <p>
-              As a trusted partner for MSMEs and individuals, we strive to bridge the gap between financial aspirations and opportunities. Our innovative, user-friendly approach ensures one-click applications, transparent processes, and unmatched convenience.
-            </p>
-            <p>
-            With a customer-first approach, Lakh Rupay is redefining the lending experience by prioritizing convenience, transparency, and trust. Our team is committed to understanding your unique financial needs and providing tailored solutions to help you achieve your goals. Backed by cutting-edge technology and a passion for empowering growth, we ensure a smooth and stress-free borrowing journey.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-  <!-- why section -->
-
-  <section class="why_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Why Choose <span>Us</span>
-        </h2>
-      </div>
-      <div class="why_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Expert-curated Loan offers
-            </h5>
-            <p>
-              Our experts carefully curate the best loan offers tailored to your needs, helping you secure competitive interest rates based on your loan amount and repayment preferences.
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Multiple Options
-            </h5>
-            <p>
-              We offer both secured and unsecured loans, making us your one-stop shop for all your borrowing needs. Whether you're looking for flexible terms or lower collateral requirements, we have the right loan solution for you.
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w4.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Happy Customers
-            </h5>
-            <p>
-              Our customers' satisfaction is our top priority, and we take pride in helping them achieve their financial goals. With our expert guidance and personalized loan solutions, we've built lasting relationships with countless happy clients.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end why section -->
-
-
-  <!-- info section -->
-
-  <section class="info_section layout_padding2" id = "contact_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_contact">
-            <h4>
-              Contact Us
-            </h4>
-            <div class="contact_link_box">
-              <a href="https://maps.app.goo.gl/ANRUTd6TP1GF219W8">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Whitefield, Bengaluru - 560048
-                </span>
-              </a>
-              <a href="https://wa.me/919075043353">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  +91-9075043353
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  ceo@lakhrupay.com
-                </span>
-              </a>
+                <!-- Timeline -->
+                <div>
+                    <h2 class="text-3xl font-bold text-black mb-8 text-center">Our Journey</h2>
+                    <div class="max-w-2xl mx-auto">
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-black">2019 - Company Founded</h3>
+                            <p class="text-gray-600">Started with a vision to revolutionize lead data quality in India</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-black">2020 - First 100 Clients</h3>
+                            <p class="text-gray-600">Achieved significant milestone with our growing client base</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-black">2021 - All India Data Launch</h3>
+                            <p class="text-gray-600">Expanded services to cover pan-India lead data</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-semibold text-black">2023 - 1000+ Clients</h3>
+                            <p class="text-gray-600">Became India's leading lead data provider</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="info_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_detail">
-            <h4>
-              Info
-            </h4>
-            <p>
-              Your trusted partner for quick and hassle-free loans. Empowering individuals and MSMEs, we make financing simple, transparent, and accessible. Apply now and turn your financial aspirations into reality!
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto info_col">
-          <div class="info_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="info_links">
-              <a class="active" href="index.html">
-                Home
-              </a>
-              <a class="" href="refunds.html">
-                Refund and Cancellation
-              </a>
-              <a class="" href="TnC.html">
-                Terms and Conditions
-              </a>
-              <a class="" href="policy.html">
-                Privacy Policy
-              </a>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div class="page" id="services">
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-black mb-4">Our Data Services</h1>
+                    <p class="text-xl text-gray-600">Comprehensive lead solutions for every business need</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white border rounded-lg p-6 hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-black mb-2 text-center">Lead Data</h3>
+                        <p class="text-gray-600 text-center mb-4">Verified contact information including names, phone numbers, and business details across 50+ industries.</p>
+                        <button class="text-gold font-semibold hover:underline block mx-auto" onclick="showPage('pricing')">
+                            Learn More →
+                        </button>
+                    </div>
+
+                    <div class="bg-white border rounded-lg p-6 hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-black mb-2 text-center">All India Data</h3>
+                        <p class="text-gray-600 text-center mb-4">Complete nationwide coverage with over 2 million verified contacts from major cities and towns.</p>
+                        <button class="text-gold font-semibold hover:underline block mx-auto" onclick="showPage('pricing')">
+                            Learn More →
+                        </button>
+                    </div>
+
+                    <div class="bg-white border rounded-lg p-6 hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-black mb-2 text-center">Email Leads</h3>
+                        <p class="text-gray-600 text-center mb-4">Targeted email marketing lists with verified email addresses and demographic filters.</p>
+                        <button class="text-gold font-semibold hover:underline block mx-auto" onclick="showPage('pricing')">
+                            Learn More →
+                        </button>
+                    </div>
+
+                    <div class="bg-white border rounded-lg p-6 hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-black mb-2 text-center">Trade Show Contacts</h3>
+                        <p class="text-gray-600 text-center mb-4">High-value leads from major industry events, conferences, and exhibitions across India.</p>
+                        <button class="text-gold font-semibold hover:underline block mx-auto" onclick="showPage('pricing')">
+                            Learn More →
+                        </button>
+                    </div>
+
+                    <div class="bg-white border rounded-lg p-6 hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-black mb-2 text-center">Custom Data Solutions</h3>
+                        <p class="text-gray-600 text-center mb-4">Tailored data packages based on your specific industry, location, and target audience requirements.</p>
+                        <button class="text-gold font-semibold hover:underline block mx-auto" onclick="showPage('contact')">
+                            Contact Us →
+                        </button>
+                    </div>
+
+                    <div class="bg-white border rounded-lg p-6 hover:shadow-lg transition-all">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-black mb-2 text-center">Data Verification</h3>
+                        <p class="text-gray-600 text-center mb-4">Regular updates and verification to ensure 95%+ accuracy on all contact information.</p>
+                        <button class="text-gold font-semibold hover:underline block mx-auto" onclick="showPage('pricing')">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 info_col ">
-          <h4>
-            Subscribe
-          </h4>
-          <form action="https://docs.google.com/forms/d/e/1FAIpQLSe-3CCZR9hCYoSOsqIE7EKIQvVanGz4tZ_hJuls4iOd2NoJmQ/formResponse" method="POST" target="_blank">
-            <input type="text" name="Name" placeholder="Name" required />
-            <input type="text" name="Email" placeholder="E-mail" required />
-            <input type="text" name="Phone" placeholder="Contact No" required />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
+        </section>
     </div>
-  </section>
 
-  <!-- end info section -->
+    <!-- Pricing Page -->
+    <div class="page" id="pricing">
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-black mb-4">Choose Your Package</h1>
+                    <p class="text-xl text-gray-600">Transparent pricing for every business need</p>
+                </div>
 
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://www.lakhrupay.com/">LakhRupay</a>
-      </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <div class="pricing-card bg-white border rounded-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-black mb-4">All India Data Pack</h3>
+                        <div class="text-4xl font-bold gold mb-2">₹12,000</div>
+                        <p class="text-gray-600 mb-4">Complete nationwide coverage</p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li>✓ 2M+ verified contacts</li>
+                            <li>✓ All states & cities</li>
+                            <li>✓ Industry-wise filtering</li>
+                            <li>✓ Excel format delivery</li>
+                        </ul>
+                        <button class="cta-button w-full py-3 rounded-lg mb-3" onclick="purchaseViaWhatsApp('All India Data Pack')">
+                            Buy Now
+                        </button>
+                        <button class="whatsapp-btn w-full py-3 rounded-lg text-sm">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Query
+                        </button>
+                    </div>
+
+                    <div class="pricing-card bg-white border rounded-lg p-6 text-center best-value">
+                        <h3 class="text-xl font-bold text-black mb-4">State-wise Data Pack</h3>
+                        <div class="text-4xl font-bold gold mb-2">₹6,000</div>
+                        <p class="text-gray-600 mb-4">Target specific states</p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li>✓ 500K+ verified contacts</li>
+                            <li>✓ Choose any 3 states</li>
+                            <li>✓ City-level filtering</li>
+                            <li>✓ Excel format delivery</li>
+                        </ul>
+                        <button class="cta-button w-full py-3 rounded-lg mb-3" onclick="purchaseViaWhatsApp('State-wise Data Pack')">
+                            Buy Now
+                        </button>
+                        <button class="whatsapp-btn w-full py-3 rounded-lg text-sm">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Query
+                        </button>
+                    </div>
+
+                    <div class="pricing-card bg-white border rounded-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-black mb-4">City-wise Data Pack</h3>
+                        <div class="text-4xl font-bold gold mb-2">₹3,000</div>
+                        <p class="text-gray-600 mb-4">Local business focus</p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li>✓ 100K+ verified contacts</li>
+                            <li>✓ Choose any 5 cities</li>
+                            <li>✓ Industry targeting</li>
+                            <li>✓ Excel format delivery</li>
+                        </ul>
+                        <button class="cta-button w-full py-3 rounded-lg mb-3" onclick="purchaseViaWhatsApp('City-wise Data Pack')">
+                            Buy Now
+                        </button>
+                        <button class="whatsapp-btn w-full py-3 rounded-lg text-sm">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Query
+                        </button>
+                    </div>
+
+                    <div class="pricing-card bg-white border rounded-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-black mb-4">Email Leads Pack</h3>
+                        <div class="text-4xl font-bold gold mb-2">₹4,000</div>
+                        <p class="text-gray-600 mb-4">Targeted email campaigns</p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li>✓ 500K+ verified emails</li>
+                            <li>✓ Industry & location filters</li>
+                            <li>✓ 95% deliverability</li>
+                            <li>✓ CSV format delivery</li>
+                        </ul>
+                        <button class="cta-button w-full py-3 rounded-lg mb-3" onclick="purchaseViaWhatsApp('Email Leads Pack')">
+                            Buy Now
+                        </button>
+                        <button class="whatsapp-btn w-full py-3 rounded-lg text-sm">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Query
+                        </button>
+                    </div>
+
+                    <div class="pricing-card bg-white border rounded-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-black mb-4">Trade Show Contacts</h3>
+                        <div class="text-4xl font-bold gold mb-2">₹5,000</div>
+                        <p class="text-gray-600 mb-4">Premium event attendees</p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li>✓ 50K+ verified contacts</li>
+                            <li>✓ Recent event data</li>
+                            <li>✓ Decision maker contacts</li>
+                            <li>✓ Excel format delivery</li>
+                        </ul>
+                        <button class="cta-button w-full py-3 rounded-lg mb-3" onclick="purchaseViaWhatsApp('Trade Show Contacts Pack')">
+                            Buy Now
+                        </button>
+                        <button class="whatsapp-btn w-full py-3 rounded-lg text-sm">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Query
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bulk Deals Section -->
+                <div class="bg-off-white rounded-lg p-8">
+                    <h2 class="text-3xl font-bold text-black mb-4 text-center">Bulk Data Deals</h2>
+                    <p class="text-center text-gray-600 mb-8">Get extra discounts on bulk purchases</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-lg p-6 text-center">
+                            <h3 class="text-xl font-bold text-black mb-2">Combo Deal #1</h3>
+                            <p class="text-gray-600 mb-4">All India + Email Leads</p>
+                            <div class="text-3xl font-bold gold mb-4">₹14,000</div>
+                            <p class="text-sm text-gray-600 mb-4">Save ₹2,000</p>
+                            <button class="cta-button w-full py-3 rounded-lg mb-3" onclick="purchaseViaWhatsApp('Combo Deal - All India + Email')">
+                                Buy Combo
+                            </button>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 text-center">
+                            <h3 class="text-xl font-bold text-black mb-2">Bulk Discount</h3>
+                            <p class="text-gray-600 mb-4">Buy 2 packs, get 10% off</p>
+                            <div class="text-3xl font-bold gold mb-4">Save 10%</div>
+                            <p class="text-sm text-gray-600 mb-4">On any 2 or more packs</p>
+                            <button class="cta-button w-full py-3 rounded-lg mb-3" onclick="purchaseViaWhatsApp('Bulk Discount Offer')">
+                                Get Discount
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
-  <!-- footer section -->
 
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+    <!-- Contact Page -->
+    <div class="page" id="contact">
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-black mb-4">Get In Touch</h1>
+                    <p class="text-xl text-gray-600">Let's discuss your data needs</p>
+                </div>
 
-</body>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-black mb-6">Send us a message</h2>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-black mb-2">Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 border rounded-lg form-input">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-black mb-2">Email</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 border rounded-lg form-input">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-black mb-2">Phone</label>
+                                <input type="tel" name="phone" class="w-full px-4 py-3 border rounded-lg form-input">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-black mb-2">Message</label>
+                                <textarea name="message" rows="4" required class="w-full px-4 py-3 border rounded-lg form-input"></textarea>
+                            </div>
+                            <button type="submit" class="cta-button px-8 py-3 rounded-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
 
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-black mb-6">Contact Information</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-phone gold mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="font-semibold text-black">Phone</h3>
+                                    <p class="text-gray-600">+91 9876543210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope gold mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="font-semibold text-black">Email</h3>
+                                    <p class="text-gray-600">info@leadvault.in</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fab fa-whatsapp gold mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="font-semibold text-black">WhatsApp</h3>
+                                    <p class="text-gray-600">+91 9876543210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt gold mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="font-semibold text-black">Address</h3>
+                                    <p class="text-gray-600">Mumbai, Maharashtra, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <button class="whatsapp-btn px-6 py-3 rounded-lg" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-database gold mr-2"></i>LeadVault
+                    </h3>
+                    <p class="text-gray-400">Premium lead data solutions for growing businesses across India.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:gold">Lead Data</a></li>
+                        <li><a href="#" class="hover:gold">All India Data</a></li>
+                        <li><a href="#" class="hover:gold">Email Leads</a></li>
+                        <li><a href="#" class="hover:gold">Trade Show Contacts</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:gold">About Us</a></li>
+                        <li><a href="#" class="hover:gold">Pricing</a></li>
+                        <li><a href="#" class="hover:gold">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="space-y-2">
+                        <a href="#" class="block text-gray-400 hover:gold">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp: +91 9876543210
+                        </a>
+                        <a href="mailto:info@leadvault.in" class="block text-gray-400 hover:gold">
+                            <i class="fas fa-envelope mr-2"></i>info@leadvault.in
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LeadVault. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.toggle('gold', link.dataset.page === pageId);
+            });
+
+            // Close mobile menu
+            document.querySelector('.mobile-menu').classList.remove('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+
+            // Add fade-in animation
+            setTimeout(() => {
+                document.getElementById(pageId).classList.add('fade-in');
+            }, 100);
+        }
+
+        // Mobile menu
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            document.querySelector('.mobile-menu').classList.add('active');
+        });
+
+        document.querySelector('.mobile-menu-close').addEventListener('click', () => {
+            document.querySelector('.mobile-menu').classList.remove('active');
+        });
+
+        // Navigation links
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPage(link.dataset.page);
+                });
+            });
+        });
+
+        // WhatsApp integration
+        function purchaseViaWhatsApp(packageName) {
+            const message = encodeURIComponent(`Hi, I'd like to purchase the ${packageName} pack.`);
+            window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        }
+
+        function openWhatsApp() {
+            const message = encodeURIComponent('Hi, I have a query about your lead data services.');
+            window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        }
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=ceolakhrupay/leadvault" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
 </html>
